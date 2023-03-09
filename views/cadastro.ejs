@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+<!-- Caixa de inputs -->
+    <div class="all-content">
+        <div class="content">
+            <form method="POST" action="/">
+                <div class="group">
+                    <label for="cod">Código</label>
+                    <input type="number" name="cod" id="cod" min="1" max="100">
+                </div>
+                <div class="group">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" maxlength="60">
+                </div>
+                <div class="group">
+                    <label for="valor">Valor</label>
+                    <label for="valor" id="real">R$</label>
+                    <input type="text" name="valor" id="valor" min="1" max="10000">
+                </div>
+                <div class="group">
+                    <label for="qtd">Quantidade</label>
+                    <input type="number" name="qtd" id="qtd" min="1" max="500">           
+                </div>
+                <div class="group">
+                    <label for="unidade">Unidade</label>
+                    <select name="unidade" id="unidade">
+                        <optgroup label="Sólido">
+                            <option value="miligrama(s)">miligrama(s)</option>
+                            <option value="grama(s)">grama(s)</option>
+                            <option value="Quilograma(s)">Quilograma(s)</option>
+                        </optgroup>
+                        <optgroup label="Líquido">
+                            <option value="mililitro(s)">mililitro(s)</option>
+                            <option value="litro(s)">litro(s)</option>
+                        </optgroup>
+                        <optgroup label="Unidade">
+                            <option value="unidade(s)" selected>unidade(s)</option>
+                        </optgroup>
+                    </select>            
+                </div>
+                <button type="reset">Limpar</button>
+                <button type="submit">Buscar</button>
+                <a href="/inserir">Novo</a>
+                <button type="submit">Alterar</button>
+                <button type="submit">Apagar</button>
+            </form>         
+        </div>
+    </div>
+<!-- Tabela -->
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                    <th>Unidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(entry=> { %>
+                    <tr>
+                        <td><%= entry.id_produto %></td>
+                        <td><%= entry.nome_produto %></td>                       
+                        <td>R$<%= entry.valor_produto.toFixed(2) %></td>
+                        <td><%= entry.qtd_produto %></td>
+                        <td><%= entry.unidade_produto %></td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
