@@ -6,88 +6,99 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.all-content {
+.voltar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+}
+
+a {
+    background-color: #FF6D28;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    background-color: #ff6c28e1;
+}
+
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
-.content {
-    width: 30vw;
-    height: 45vh;
-    background-color: #C8B6A6;
+form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #8D7B68;
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
-.content .group {
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button, .la-plus, .la-broom {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #FF6D28;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 15px;
 }
 
-.content .group #real {
-    font-weight: 100;
-    font-size: 1rem;
+button:hover {
+    cursor: pointer;
+    background-color: #ff6c28e1;
 }
 
-.content .group #cod {
-    width: 3vw;
-    height: 2vh;
-}
-
-.content .group #nome {
-    width: 12vw;
-    height: 2vh;
-}
-
-.content .group #valor {
-    width: 5vw;
-    height: 2vh;
-}
-
-.content .group #qtd {
-    width: 3.5vw;
-    height: 2vh;
-}
-
-.content .group #unidade {
-    width: 8vw;
-    height: 2vh;
-}
-
-.content .group input {
-    border: none;
-}
-
-table {
-    margin-top: 50px;
-    width: 100vw;
-    border-collapse: collapse;
-    border: 1px solid #000;
-}
-
-thead tr th{
-    padding: 7px;
+.group label {
+    font-size: 1.6rem;
     font-weight: bold;
-    text-align: center;
-    border: 1px solid #000;
 }
 
-tbody tr td{
-    padding: 9px;
-    font-weight: 400;
-    font-size: 11pt;
-    border: 1px solid #000;
+.group #nome {
+    width: 10vw;
+    height: 2.5vh;
+    font-size: 1.2rem;
 }
 
-.content button {
-    padding: 15px;
+.group #preco {
+    width: 5vw;
+    height: 2.5vh;
+    font-size: 1.2rem;
+}
+
+.group #qtd {
+    width: 5vw;
+    height: 2.5vh;
+    font-size: 1.2rem;
+}
+.group #unidade {
+    width: 7vw;
+    height: 2.5vh;
+    font-size: 1.2rem;
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+</head>
+
+<body>
+    <!-- Criar Produtos -->
+    <div class="novo-produto">
+        <a href="/cadastro"><i class="las la-plus-circle"></i> Novo Produto</a>
+    </div>
+    <!-- Tabela -->
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                    <th>Unidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(entry=> { %>
+                    <tr>
+                        <td>
+                            <%= entry.id_produto %>
+                        </td>
+                        <td>
+                            <%= entry.nome_produto %>
+                        </td>
+                        <td>R$<%= entry.valor_produto.toFixed(2) %>
+                        </td>
+                        <td>
+                            <%= entry.qtd_produto %>
+                        </td>
+                        <td>
+                            <%= entry.unidade_produto %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

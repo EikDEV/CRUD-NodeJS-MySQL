@@ -11,7 +11,8 @@ app.use('/js', express.static(path.join(__dirname, 'js')));
 app.set('view engine', 'ejs');
 
 //Rotas
-app.use('/', require('./routes/cadastro'));
+app.use('/', require('./routes/principal'));
+app.use('/cadastro', require('./routes/cadastro'));
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor iniciado na porta 3000");
